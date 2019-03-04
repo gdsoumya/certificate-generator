@@ -9,4 +9,9 @@ Documentation for editing the config file can be found here https://github.com/g
 
 from certificate_generator import Certificate
 ct = Certificate("John Doe","Green Earth Initiative","1st Jan, 2019","outputcertificate.png")
-ct.create()
+x = ct.create()
+if x==1:
+	print("\nSTATUS : SUCCESSFUL\n")
+else:
+	print("\nSTATUS: FAILED\n")
+

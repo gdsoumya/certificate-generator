@@ -6,7 +6,7 @@ class Certificate:
 	Defines an certificate with the following properties:
 
     Attributes:
-        name: A string representing the certificate recievers name.
+        name: A string representing the certificate reciever's name.
         course: A string representing the name of the course enrolled in.
         date: A string representing the date of issue of certificate.
 		output: A string representing the name of the output file that will be generated (has to be an image file).
@@ -21,7 +21,6 @@ class Certificate:
 		self.course = course
 		self.date = date
 		self.output = output
-		self.configure()
 
 	def configure(self):
 		"""
@@ -38,24 +37,25 @@ class Certificate:
 			self.font1 = config['NAME']['NAME_FONT']
 			self.color1 = config['NAME']['NAME_COLOR']
 			self.size1 = int(config['NAME']['NAME_FONT_SIZE'])
-			self.size2 = int(config['COURSE']['COURSE_FONT_SIZE'])
-			self.font2 = config['COURSE']['COURSE_FONT']
-			self.color2 = config['COURSE']['COURSE_COLOR']
+			self.size2 = int(config['EVENT']['EVENT_FONT_SIZE'])
+			self.font2 = config['EVENT']['EVENT_FONT']
+			self.color2 = config['EVENT']['EVENT_COLOR']
 			self.size3 = int(config['DATE']['DATE_FONT_SIZE'])
 			self.font3 = config['DATE']['DATE_FONT']
 			self.color3 = config['DATE']['DATE_COLOR']
 			self.x1 = int(config['NAME']['NAME_X'])
 			self.y1 = int(config['NAME']['NAME_y'])
 			self.width1 = int(config['NAME']['NAME_WIDTH'])
-			self.x2 = int(config['COURSE']['COURSE_X'])
-			self.y2 = int(config['COURSE']['COURSE_y'])
-			self.width2 = int(config['COURSE']['COURSE_WIDTH'])
+			self.x2 = int(config['EVENT']['EVENT_X'])
+			self.y2 = int(config['EVENT']['EVENT_y'])
+			self.width2 = int(config['EVENT']['EVENT_WIDTH'])
 			self.x3 = int(config['DATE']['DATE_X'])
 			self.y3 = int(config['DATE']['DATE_Y'])
 			self.width3 = int(config['DATE']['DATE_WIDTH'])
 		except:
 			print("\n!! ERORR : CHECK THE CONFIG FILE !!\n")
-			exit()
+			return 0
+		return 1
 
 	def create(self):
 		"""
@@ -64,11 +64,13 @@ class Certificate:
 		and saves the output accordingly.
 
 		"""
+		if self.configure()==0:
+			return 0
 		try:
 			image = Image.open(self.cert)
 		except:
 			print("\n!! ERROR : CHECK TEMPLATE FILE !!\n")
-			exit()
+			return 0
 		draw = ImageDraw.Draw(image)
 		try:
 			font1 = ImageFont.truetype(self.font1, size=self.size1)
@@ -76,7 +78,7 @@ class Certificate:
 			font3 = ImageFont.truetype(self.font3, size=self.size3)
 		except:
 			print("\n!! ERROR : CHECK FONT FILES !!\n")
-			exit()
+			return 0
 		width = font1.getsize(self.name)[0]
 		draw.text((self.x1+(self.width1-width)/2, self.y1-self.size1), self.name, fill=self.color1, font=font1)
 		width = font2.getsize(self.course)[0]
@@ -88,3 +90,5 @@ class Certificate:
 			print("\n>>  CERTIFICATE GENERATED AND SAVED AS : "+self.output+ "  <<\n")
 		except:
 			print("\n!! ERORR : CERTIFICATE COULD NOT BE SAVED !!\n")
+			return 0
+		return 1
