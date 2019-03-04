@@ -1,5 +1,5 @@
 # Certificate Generator
-##
+
 The Certificate Generator is a simple dynamic course/event certificate generator. It is easy to use and highly customizable.
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -9,7 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 Certificate Generator requires [ **Python (> Python 3.5)**](https://www.python.org/) .
 
 ##### Get the project.
-#
+
 ```sh
 $ git clone https://github.com/gdsoumya/certificate-generator.git
 or 
@@ -66,8 +66,6 @@ DATE_WIDTH = 126
 
 ##### * can be replaced with NAME/DATE/EVENT
 
-#
-#
 ## Running Script
 The project comes with two example test files [test.py](https://github.com/gdsoumya/certificate-generator/blob/master/test.py) and [test-cli.py](https://github.com/gdsoumya/certificate-generator/blob/master/test-cli.py).
 
