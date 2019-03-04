@@ -1,0 +1,26 @@
+[SETTINGS]
+TEMPLATE = template/example-template.jpg
+
+[NAME]
+NAME_FONT = fonts/Cookie-Regular.ttf
+NAME_FONT_SIZE = 35
+NAME_COLOR = rgb(0,0,0)
+NAME_X = 122
+NAME_Y = 220
+NAME_WIDTH = 404
+
+[COURSE]
+COURSE_FONT = fonts/Kanit-Regular.ttf
+COURSE_FONT_SIZE =30
+COURSE_COLOR = rgb(0,0,0)
+COURSE_X = 122
+COURSE_Y = 318
+COURSE_WIDTH = 404
+
+[DATE]
+DATE_FONT = fonts/Kanit-Regular.ttf
+DATE_FONT_SIZE = 21
+DATE_COLOR = rgb(0,0,0)
+DATE_X = 90
+DATE_Y = 375
+DATE_WIDTH = 126
