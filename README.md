@@ -4,18 +4,18 @@ The Certificate Generator is a simple dynamic course/event certificate generator
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-#### Prerequisites
+### Prerequisites
 
 Certificate Generator requires [ **Python (> Python 3.5)**](https://www.python.org/) .
 
-##### Get the project.
+#### Get the project.
 
 ```sh
 $ git clone https://github.com/gdsoumya/certificate-generator.git
 or 
 Download and extract the Zip-File
 ```
-#### Installing Dependencies
+### Installing Dependencies
 The Project has a few dependencies which can be installed by running.
 ```sh
 $ cd certificate-generator
