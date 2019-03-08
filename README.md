@@ -1,6 +1,7 @@
 # Certificate Generator
 
-The Certificate Generator is a simple dynamic course/event certificate generator. It is easy to use and highly customizable.
+The Certificate Generator is a simple and dynamic course/event certificate generator. It is easy to use and highly customizable.
+One can simply generate a customized certificate by providing the certificate template, name of recipient, name of event and date of the event. 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
@@ -100,5 +101,5 @@ $ python test-cli.py -n "John Doe" -e "GREEN EARTH INITIATIVE" -d "01/02/2019" -
 ## Author
 -   **Soumya Ghosh Dastidar**
 
-## Contributting
+## Contributing
 Any contribution/suggestions are welcomed.
