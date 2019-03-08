@@ -9,7 +9,6 @@ Documentation for editing the config file can be found here https://github.com/g
 
 from certificate_generator import Certificate
 import argparse 
-import sys
 
 parser = argparse.ArgumentParser(description = "Dynamic Course/Event Certificate Generator. Use Quotes while specifying Name/Event/Date/Output with spaces inbetween.")
 
